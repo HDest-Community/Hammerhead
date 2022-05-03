@@ -60,7 +60,7 @@ class HDHammerhead : HDCellWeapon
 			DrainHeat(HHProp_Heat, 10, 0.5, 1.5, 0.6);
 		}
 
-		WeaponStatus[HHProp_Rpm] = clamp(WeaponStatus[HHProp_Rpm] - 5, 0, MaxRpm);
+		WeaponStatus[HHProp_Rpm] = clamp(WeaponStatus[HHProp_Rpm] - 4, 0, MaxRpm);
 		double heatFac = WeaponStatus[HHProp_Heat] / double(A_GetMaxHeat());
 		if (heatFac > 1.0 && owner && random(1, 100) <= 100 * (heatFac - 1))
 		{
