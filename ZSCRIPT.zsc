@@ -12,7 +12,7 @@ class HammerheadHandler : EventHandler
 		switch (e.Replacement.GetClassName())
 		{
 			case 'ChaingunReplaces':
-				if (random[hamheadrand]() <= 24)
+				if (random[hamheadrand]() <= 32)
 				{
 					e.Replacement = "HammerheadRandom";
 				}
