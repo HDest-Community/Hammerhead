@@ -123,7 +123,7 @@ class HDHammerhead : HDCellWeapon
 		{
 			WeaponStatus[i] = GetDefaultByType('HDBattery').MaxPerUnit * ShotsPerUnit;
 		}
-		A_CycleModes(true);
+		A_CycleModes();
 	}
 
 	override string GetHelpText()
