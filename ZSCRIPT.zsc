@@ -123,7 +123,7 @@ class HDHammerhead : HDCellWeapon
 		{
 			WeaponStatus[i] = GetDefaultByType('HDBattery').MaxPerUnit * ShotsPerUnit;
 		}
-		A_CycleModes();
+		WeaponStatus[HHProp_ActiveBatteries] = (1 | 2);
 	}
 
 	override string GetHelpText()
@@ -376,7 +376,7 @@ class HDHammerhead : HDCellWeapon
 				double rpmFac = invoker.WeaponStatus[HHProp_Rpm] / double(MaxRpm);
 				A_StartSound("Hammerhead/Fire", 8, pitch: 1.2 + 0.10 * rpmFac);
 				
-				invoker.WeaponStatus[HHProp_Heat] += 6 * active;
+				invoker.WeaponStatus[HHProp_Heat] += 8 * active;
 				double heatFac = invoker.WeaponStatus[HHProp_Heat] / double(A_GetMaxHeat());
 
 				vector2 spread = (1.0, 0.5) * 3 * heatFac;
