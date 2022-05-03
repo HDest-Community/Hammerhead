@@ -116,7 +116,7 @@ class HDHammerhead : HDCellWeapon
 		}
 		return baseBulk;
 	}
-	override string, double GetPickupSprite() { return "BLNGZ0", 0.5; }
+	override string, double GetPickupSprite() { return "BLNGZ0", 0.55; }
 	override void InitializeWepStats(bool idfa)
 	{
 		for (int i = HHProp_BatteryFirst; i <= HHProp_BatteryLast; ++i)
