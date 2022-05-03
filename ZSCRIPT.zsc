@@ -123,6 +123,7 @@ class HDHammerhead : HDCellWeapon
 		{
 			WeaponStatus[i] = GetDefaultByType('HDBattery').MaxPerUnit * ShotsPerUnit;
 		}
+		A_CycleModes(true);
 	}
 
 	override string GetHelpText()
@@ -579,9 +580,9 @@ class HammerheadRandom : IdleDummy
 		Spawn:
 			TNT1 A 0 NoDelay
 			{
-				for (double i = 0; i < 360; i += 360 / 4.0)
+				for (double i = 0; i < 360; i += 360 / 2.0)
 				{
-					A_SpawnItemEx("HDBattery", 4, angle: i, flags: SXF_NOCHECKPOSITION);	
+					A_SpawnItemEx("HDBattery", 8, angle: i + 45, flags: SXF_NOCHECKPOSITION);	
 				}
 				let wpn = HDHammerhead(Spawn("HDHammerhead", pos));
 				if (!wpn)
@@ -627,7 +628,7 @@ class HammerheadPlasmaProjectile : SlowProjectile
 
 		for (int i = 0; i < dist; ++i)
 		{
-			double chargeFac = 1.0 + Charge * 0.02;
+			double chargeFac = 1.0 + Charge * 0.025;
 			A_SpawnParticle(0x55FF33, SPF_FULLBRIGHT, random(3, 6), frandom(2.0, 3.5), angle,
 				i * unit.x + frandom(-0.25, 0.25) * chargeFac,
 				i * unit.y + frandom(-0.25, 0.25) * chargeFac,
