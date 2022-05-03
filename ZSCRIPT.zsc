@@ -129,6 +129,7 @@ class HDHammerhead : HDCellWeapon
 	{
 		return String.Format(WEPHELP_FIRE.."  Shoot\n"
 		..WEPHELP_ALTFIRE.." (hold)  Vent heat\n"
+		..WEPHELP_FIREMODE.."  Switch mode\n"
 		..WEPHELP_RELOADRELOAD
 		..WEPHELP_UNLOADUNLOAD);
 	}
