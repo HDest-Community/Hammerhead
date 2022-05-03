@@ -614,7 +614,7 @@ class HammerheadPlasmaProjectile : SlowProjectile
 		A_AlertMonsters(HDCONST_ONEMETRE * 10);
 		if (hitActor)
 		{
-			hitActor.DamageMobj(self, target, randompick(15, 20, 20, 25) * Charge, 'Plasma');
+			hitActor.DamageMobj(self, target, randompick(30, 30, 30, 35, 35, 40) * Charge, 'Plasma');
 		}
 		ExplodeMissile(hitLine, null);
 	}
@@ -644,7 +644,7 @@ class HammerheadPlasmaProjectile : SlowProjectile
 	Default
 	{
 		Speed HDCONST_MPSTODUPT * 40;
-		Gravity 0.04;
+		Gravity 0.035;
 		Renderstyle "Add";
 		Scale 0.12;
 		Mass 0;
