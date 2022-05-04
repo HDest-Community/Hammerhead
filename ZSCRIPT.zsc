@@ -614,7 +614,8 @@ class HammerheadPlasmaProjectile : SlowProjectile
 		A_AlertMonsters(HDCONST_ONEMETRE * 10);
 		if (hitActor)
 		{
-			hitActor.DamageMobj(self, target, randompick(30, 30, 30, 35, 35, 40) * Charge, 'Plasma');
+			hitActor.DamageMobj(self, target, random(40, 50) * Charge, 'Plasma');
+			hitActor.A_GiveInventory('Heat', 25 * Charge);
 		}
 		ExplodeMissile(hitLine, null);
 	}
