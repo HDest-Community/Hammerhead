@@ -644,7 +644,7 @@ class HammerheadPlasmaProjectile : SlowProjectile
 
 	Default
 	{
-		Speed HDCONST_MPSTODUPT * 40;
+		Speed HDCONST_MPSTODUPT * 50;
 		Gravity 0.035;
 		Renderstyle "Add";
 		Scale 0.12;
