@@ -327,8 +327,8 @@ class HDHammerhead : HDCellWeapon
 	{
 		-HDWEAPON.FITSINBACKPACK
 		Weapon.SelectionOrder 300;
-		Weapon.SlotNumber 6;
-		Weapon.SlotPriority 1.5;
+		Weapon.SlotNumber 4;
+		Weapon.SlotPriority 0.5;
 		HDWeapon.BarrelSize 30, 3, 3;
 		Scale 0.45;
 		Tag "CIR-37 'Hammerhead' Plasma Minigun";
