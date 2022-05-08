@@ -123,6 +123,7 @@ class HDHammerhead : HDCellWeapon
 		{
 			WeaponStatus[i] = GetDefaultByType('HDBattery').MaxPerUnit * ShotsPerUnit;
 		}
+		WeaponStatus[HHProp_Mode] = 1;
 		WeaponStatus[HHProp_ActiveBatteries] = (1 | 2);
 	}
 
