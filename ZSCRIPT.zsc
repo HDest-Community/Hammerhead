@@ -12,7 +12,7 @@ class HammerheadHandler : EventHandler
 		switch (e.Replacement.GetClassName())
 		{
 			case 'ChaingunReplaces':
-				if (random[hamheadrand]() <= AceCore.GetScaledSpawnChance(8, 32))
+				if (random[hamheadrand]() <= AceCore.GetScaledChance(8, 32, acl_spawnscale_min, acl_spawnscale_max))
 				{
 					e.Replacement = "HammerheadRandom";
 				}
