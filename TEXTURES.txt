@@ -44,31 +44,31 @@ Sprite "BLNFD0", 157, 116
 	Patch "BLNFD0", 0, 0
 }
 
-Sprite "BLNPA0", 176, 83
+Sprite "BLNPA0", 190, 83
 {
 	YScale 1.200
-	Offset -62, -119
+	Offset -48, -119
 	Patch "BLNPA0", 0, 0
 }
 
-Sprite "BLNPB0", 179, 83
+Sprite "BLNPB0", 197, 83
 {
 	YScale 1.200
-	Offset -59, -119
+	Offset -41, -119
 	Patch "BLNPB0", 0, 0
 }
 
-Sprite "BLNPC0", 175, 83
+Sprite "BLNPC0", 192, 83
 {
 	YScale 1.200
-	Offset -61, -122
+	Offset -44, -122
 	Patch "BLNPC0", 0, 0
 }
 
-Sprite "BLNPD0", 168, 83
+Sprite "BLNPD0", 188, 83
 {
 	YScale 1.200
-	Offset -66, -125
+	Offset -45, -125
 	Patch "BLNPD0", 0, 0
 }
 
