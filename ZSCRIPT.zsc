@@ -550,7 +550,7 @@ class HDHammerhead : HDCellWeapon
 					case 1:
 					{
 						let bat = HDBattery(FindInventory('HDBattery'));
-						if (!bat || invoker.WeaponStatus[HHProp_BatteryLast] > -1)
+						if (!bat || invoker.WeaponStatus[HHProp_BatteryLast] > -1 || PressingReload() || PressingUnload())
 						{
 							SetWeaponState('ReloadEnd');
 							return;
@@ -570,7 +570,7 @@ class HDHammerhead : HDCellWeapon
 			#### # 3 Offset(-2, 38);
 			#### # 3 Offset(-1, 36);
 			#### # 3 Offset(0, 34);
-			Goto Ready;
+			Goto Nope;
 	}
 }
 
