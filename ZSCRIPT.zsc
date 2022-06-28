@@ -385,7 +385,7 @@ class HDHammerhead : HDCellWeapon
 
 				A_MuzzleClimb(frandom(-shake.x, shake.x), frandom(-shake.y, shake.y), frandom(-shake.x, shake.x) * 0.5, frandom(-shake.y, shake.y) * 0.5);
 
-				let proj = HammerheadPlasmaProjectile(Spawn('HammerheadPlasmaProjectile', pos + GunPos((0, 0, -6))));
+				let proj = HammerheadPlasmaProjectile(Spawn('HammerheadPlasmaProjectile', pos + GunPos((0, 0, -4))));
 				proj.angle = angle + frandom(-spread.x, spread.x);
 				proj.pitch = pitch + frandom(-spread.y, spread.y);
 				proj.target = self;
@@ -434,9 +434,10 @@ class HDHammerhead : HDCellWeapon
 					A_StartSound("Hammerhead/Pressure", 6, CHANF_LOOPING);
 					invoker.WeaponStatus[HHProp_Heat] = max(0, invoker.WeaponStatus[HHProp_Heat] - random(20, 40));
 
-					vector3 gpos = GunPos((0, 0, -6));
-					A_SpawnItemEx('HammerheadSteam', 6 * cos(pitch), -2, gpos.z + 6 * sin(-pitch), 0, -3, flags: SXF_NOCHECKPOSITION);
-					A_SpawnItemEx('HammerheadSteam', 6 * cos(pitch), 2, gpos.z + 6 * sin(-pitch), 0, 3, flags: SXF_NOCHECKPOSITION);
+					vector3 gpos = GunPos((0, 0, -4));
+					Actor a = null;
+					a = Spawn('HammerheadSteam', pos + gpos); a.angle = angle - 90; a.A_ChangeVelocity(3, 0, 0, CVF_RELATIVE);
+					a = Spawn('HammerheadSteam', pos + gpos); a.angle = angle + 90; a.A_ChangeVelocity(3, 0, 0, CVF_RELATIVE);
 				}
 				else
 				{
